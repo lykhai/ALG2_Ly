@@ -26,21 +26,22 @@ public class Calendar {
 	public static int actualDay(int day, int month, int year) {
 		int q = day;
 		int m = month;
-		int K = year%100;
-		int J = year/100;
 		if (m==1) {
 			m = 13;
-			K--;
+			year--;
 		}
 		else if(m==2) {
 			m = 14;
-			K--;
+			year--;
 		}
+		int K = year%100;
+		int J = year/100;
+		
 		return ((((q+(13*(m+1)/5)+K+K/4+J/4+5*J))+5)%7)+1;
 	}
 	
 	public String fCalendar() {
-		int acDay = actualDay(day, month, year);
+		int acDay = actualDay(day, month, year)-1;
 		int dayNum = 1;
 		
 		String calFormat = "Mo Tu We Th Fr Sa Su \n";
