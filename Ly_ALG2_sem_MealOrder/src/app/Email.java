@@ -1,8 +1,9 @@
 package app;
 
 import java.util.Properties;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
-import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.mail.Transport;
@@ -47,7 +48,7 @@ public class Email {
         new javax.mail.Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("khai.ly.dinh.8@gmail.com", "0nepunchMan88");
+                return new PasswordAuthentication("khai.ly.dinh.8@gmail.com", "Piskot123");
             }
         });
 
